@@ -1,0 +1,26 @@
+<html><head></head>
+<body>
+<center><h1>최대값 구하기</h1></center>
+<script>
+var num = prompt("숫자 여러개 입력~");
+//alert("입력값은:" + num)
+document.write("<center><h1>")
+document.write(num + "<br>")
+val = num.split(' ')
+document.write(val + "<br>")
+document.write("배열 길이: " + val.length + "<br>")
+data = val.map(Number)
+for (j=0;j<(data.length-1);j++){
+ for (i=0;i<(data.length-1);i++){
+   if( data[i] > data[i+1]){
+     tmp = data[i]
+     data[i] = data[i+1]
+     data[i+1] = tmp
+   }
+ }
+ document.write(j + "번째 정렬후:" + data + "<br>")
+}
+document.write("최종 정렬 후 :" + data)
+document.write("</h1></center>")
+</script>
+</body></html>

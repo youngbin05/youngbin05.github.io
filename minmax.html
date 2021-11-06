@@ -1,0 +1,23 @@
+<html><head></head>
+<body>
+<center><h1>최대값 구하기</h1></center>
+<script>
+var num = prompt("숫자 여러개 입력~");
+//alert("입력값은:" + num)
+document.write(num + "<br>")
+val = num.split(' ')
+document.write(val + "<br>")
+document.write("배열 길이: " + val.length + "<br>")
+document.write("두번째 데이터:" + val[1] + "<br>")
+data = val.map(Number)
+var max = -100
+min = 100
+for (i=0;i<data.length;i++){
+  if( data[i] > max)
+    max = data[i]
+  if( data[i] < min)
+    min = data[i]
+}
+document.write("최대값:" + max + "최솟값:" + min)
+</script>
+</body></html>
